@@ -1,22 +1,22 @@
 package com.company;
 
-public class Pallindrome {
+public class Palindrome {
 
     char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     public String solution(int N, int K) {
-        String pallindrome = "";
+        String palindrome = "";
         for (int i=0, j=0; i<(N/2)-1; i++) {
             if (i <= K)
                 j = i;
 
-            pallindrome += alphabet[j];
+            palindrome += alphabet[j];
         }
 
         if (N%2==1)
-            pallindrome += this.alphabet[K-1];
+            palindrome += this.alphabet[K-1];
 
-        pallindrome += (new StringBuilder(pallindrome).reverse().toString());
-        return pallindrome;
+        palindrome += (new StringBuilder(palindrome).reverse().toString());
+        return palindrome;
     }
 }
